@@ -1,0 +1,43 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>测试放大镜效果</title>
+	</head>
+	<body>
+		<div style="text-align: center; margin: 10px">
+			<button onclick="oneX()">一倍</button>
+			<button onclick="twoX()">二倍</button>
+			<button onclick="threeX()">三倍</button>
+		</div>
+		<div class="wrap" style="display: flex; justify-content: center">
+			<div class="left" style="margin-right: 50px">
+				<img src="img/a1.png" width="400" class="laftImg" />
+			</div>
+			<!-- <div class="right">
+				<img src="img/a2.png" width="400" class="rightImg" />
+			</div> -->
+		</div>
+	</body>
+	<script src="./js/jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="./js/BUP.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.laftImg').BUP('rightImg', 1)
+			// $('.rightImg').BUP('laftImg', 1)
+    })
+    
+		function oneX() {
+			$('.laftImg').BUP('rightImg', 1)
+			$('.rightImg').BUP('laftImg', 1)
+		}
+		function twoX() {
+			$('.laftImg').BUP('rightImg', 0.5)
+			$('.rightImg').BUP('laftImg', 0.5)
+		}
+		function threeX() {
+			$('.laftImg').BUP('rightImg', 1.5)
+			$('.rightImg').BUP('laftImg', 1.5)
+		}
+	</script>
+</html>
